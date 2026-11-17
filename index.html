@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Träningsmatch mot KBK Motion dam</title>
+<meta name="description" content="Boka en träningsmatch mot Kungsladugårds BK Motion dam (Old Girls). Välj en ledig söndagskväll, 7 vs 7 på Sjöbaren Arena, så hör vi av oss.">
+<meta property="og:title" content="Boka träningsmatch mot KBK Motion dam">
+<meta property="og:description" content="Välj en ledig söndagskväll hemma på Sjöbaren Arena. Matcherna spelas 7 vs 7, kl 18:30–20:00. Vi hör av oss och bekräftar.">
+<meta property="og:image" content="https://8bitcat.github.io/kbk-motiondam/bilder/laget.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://8bitcat.github.io/kbk-motiondam/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="bilder/kbk.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+  /* Samma klubbfärger och typsnitt som stödmedlemssidan. Hero med märke och lagfoto,
+     sedan tiderna som rutor per månad. En ruta öppnar bokningsrutan (dialog). */
+  :root {
+    --maroon: #7c2938; --maroon-deep: #4a1521; --maroon-ink: #2a0d14; --cuff: #a8323e;
+    --gold: #f49e0a; --gold-deep: #c97d05; --cream: #f7e2bc;
+    --bg: #faf6ee; --surface: #ffffff; --surface-2: #f3ebdd;
+    --fg: #2a1a1d; --muted: #6f5a5f; --line: #e4d8c6;
+    --focus: #1d6fd6; --ok: #2f8f4e; --ok-bg: #e3f3e8; --bad: #b3261e; --bad-bg: #fbe7e5;
+    --font-display: "Bebas Neue", "Oswald", "Arial Narrow", Impact, sans-serif;
+    --font-body: "Barlow", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1013; --surface: #271619; --surface-2: #33201f;
+      --fg: #f4eadc; --muted: #c9b2b7; --line: #4a2f35;
+      --focus: #7fb3ff; --ok: #6cc98a; --ok-bg: #1d3325; --bad: #ff8a80; --bad-bg: #3a1a1a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1013; --surface: #271619; --surface-2: #33201f;
+    --fg: #f4eadc; --muted: #c9b2b7; --line: #4a2f35;
+    --focus: #7fb3ff; --ok: #6cc98a; --ok-bg: #1d3325; --bad: #ff8a80; --bad-bg: #3a1a1a;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: var(--font-body); font-size: 17px; line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  [hidden] { display: none !important; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing: .02em; line-height: .95; margin: 0; text-wrap: balance; }
+  h2 { font-size: clamp(34px, 6vw, 48px); }
+  p { margin: 0; }
+  button, input { font: inherit; color: inherit; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+  .wrap { max-width: 1040px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .section { padding-block: 40px 8px; display: grid; gap: 18px; }
+  .section-head { display: grid; gap: 6px; }
+  .section-head p { color: var(--muted); max-width: 62ch; }
+
+  /* ---------- Hero ---------- */
+  .hero { color: var(--cream); background: linear-gradient(160deg, #8a2f3f 0%, var(--maroon) 45%, var(--maroon-deep) 100%); }
+  .hero .wrap { padding-block: 22px 30px; display: grid; gap: 22px; }
+  .club { display: flex; align-items: center; gap: 12px; }
+  .club img { width: 56px; height: auto; flex: none; filter: drop-shadow(0 2px 4px rgba(0,0,0,.25)); }
+  .club .name { font-family: var(--font-display); font-size: 24px; line-height: 1; letter-spacing: .03em; color: #fff; }
+  .club .sub { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; opacity: .85; }
+  .hero-grid { display: grid; gap: 22px; align-items: center; }
+  @media (min-width: 780px) { .hero-grid { grid-template-columns: 1fr 1.05fr; gap: 36px; } }
+  .hero h1 { font-size: clamp(50px, 12vw, 100px); color: #fff; overflow-wrap: anywhere; }
+  @media (min-width: 780px) { .hero h1 { font-size: clamp(56px, 6.4vw, 76px); } }
+  .hero h1 em { font-style: normal; color: var(--gold); }
+  .hero-text { display: grid; gap: 16px; min-width: 0; }
+  .lead { font-size: 19px; max-width: 44ch; }
+  .facts { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .facts li { background: rgba(247,226,188,.12); border: 1px solid rgba(247,226,188,.28); border-radius: 999px; padding: 6px 14px; font-size: 15px; font-weight: 600; color: #fff; }
+  .hero-cta { display: inline-flex; align-items: center; gap: 10px; width: fit-content; background: var(--gold); color: var(--maroon-ink); text-decoration: none; border-radius: 999px; padding: 10px 18px; font-weight: 700; font-size: 16px; }
+  .hero-cta:hover { background: #ffb02e; }
+  .hero-photo { margin: 0; min-width: 0; }
+  .hero-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; border: 3px solid var(--cream); box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+
+  /* ---------- Tiderna ---------- */
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 14px; color: var(--muted); align-items: center; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 12px; height: 12px; border-radius: 4px; display: inline-block; }
+  .dot.free { background: var(--gold); }
+  .dot.taken { background: var(--line); }
+  #list { display: grid; gap: 30px; }
+  .month { display: grid; gap: 12px; }
+  .month h3 { font-size: 30px; color: var(--maroon); display: flex; align-items: baseline; gap: 10px; }
+  :root[data-theme="dark"] .month h3 { color: var(--gold); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .month h3 { color: var(--gold); } }
+  .month h3 small { font-family: var(--font-body); font-size: 14px; letter-spacing: .04em; color: var(--muted); font-weight: 500; }
+  .slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .slot {
+    position: relative; display: grid; grid-template-rows: auto auto auto auto 1fr; justify-items: stretch; gap: 2px; text-align: left;
+    min-height: 152px; padding: 0 14px 12px; border-radius: 14px; overflow: hidden; cursor: pointer;
+    background: var(--surface); border: 2px solid var(--line); box-shadow: 0 6px 18px rgba(42,13,20,.06);
+    transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+  }
+  .slot::before { content: ""; height: 6px; margin: 0 -14px 10px; background: var(--gold); justify-self: stretch; }
+  .slot:hover { transform: translateY(-2px); border-color: var(--gold); box-shadow: 0 10px 24px rgba(124,41,56,.16); }
+  .slot .wd { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .slot .day { font-family: var(--font-display); font-size: 52px; line-height: .9; letter-spacing: .01em; }
+  .slot .day small { font-size: 24px; margin-left: 4px; color: var(--muted); }
+  .slot .wd, .slot .day { justify-self: start; }
+  .slot .pill { justify-self: start; }
+  .slot .matches { display: grid; gap: 4px; margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); }
+  .slot .m { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .slot .m small { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+  .slot .m b { font-family: var(--font-display); font-weight: 400; font-size: 24px; line-height: 1; letter-spacing: .03em; color: var(--maroon); font-variant-numeric: tabular-nums; }
+  :root[data-theme="dark"] .slot .m b { color: var(--gold); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .slot .m b { color: var(--gold); } }
+  .slot .pill { max-width: 100%; overflow-wrap: anywhere; line-height: 1.3; align-self: end; margin-top: 8px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border-radius: 10px; padding: 4px 10px; background: var(--gold); color: var(--maroon-ink); }
+  .slot[aria-disabled="true"] { cursor: not-allowed; background: var(--surface-2); box-shadow: none; transform: none; border-color: var(--line); }
+  .slot[aria-disabled="true"]::before { background: var(--line); }
+  .slot[aria-disabled="true"] .day, .slot[aria-disabled="true"] .m b { color: var(--muted); }
+  .slot[aria-disabled="true"] .pill { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+  .slot.mine .pill { background: var(--ok); color: #fff; border-color: var(--ok); }
+  :root[data-theme="dark"] .slot.mine .pill { color: #0f2416; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .slot.mine .pill { color: #0f2416; } }
+
+  /* ---------- Hitta hit ---------- */
+  .find { display: grid; gap: 16px; }
+  @media (min-width: 780px) { .find { grid-template-columns: 1fr 1.2fr; align-items: stretch; } }
+  .find-info { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: grid; gap: 12px; align-content: start; }
+  .find-info h3 { font-size: 30px; }
+  .find-info p { color: var(--muted); font-size: 16px; }
+  .find-info p strong { color: var(--fg); }
+  .addr { font-size: 18px; font-weight: 700; color: var(--fg); }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; border-radius: 999px; padding: 10px 16px; font-weight: 700; font-size: 15px; background: var(--maroon); color: #fff; }
+  .btn.alt { background: var(--surface-2); color: var(--fg); border: 1px solid var(--line); }
+  .map { margin: 0; min-height: 280px; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: var(--surface-2); }
+  .map iframe { width: 100%; height: 100%; min-height: 280px; border: 0; display: block; }
+  .slot.skeleton { cursor: default; animation: pulse 1.4s ease-in-out infinite; }
+  .slot.skeleton:hover { transform: none; border-color: var(--line); }
+  @keyframes pulse { 50% { opacity: .55; } }
+
+  .state { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; display: grid; gap: 10px; justify-items: start; }
+  .state p { color: var(--muted); }
+
+  /* ---------- Så går det till ---------- */
+  .how { display: grid; gap: 12px; counter-reset: s; list-style: none; margin: 0; padding: 0; }
+  @media (min-width: 720px) { .how { grid-template-columns: repeat(3, 1fr); } }
+  .how li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; display: grid; gap: 6px; align-content: start; }
+  .how li::before { counter-increment: s; content: counter(s); font-family: var(--font-display); font-size: 34px; line-height: 1; color: var(--gold-deep); }
+  .how h3 { font-size: 24px; }
+  .how p { color: var(--muted); font-size: 15px; }
+
+  /* ---------- Bokningsrutan ---------- */
+  dialog {
+    width: min(520px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); padding: 0; border: 0; border-radius: 18px;
+    background: var(--surface); color: var(--fg); box-shadow: 0 30px 80px rgba(0,0,0,.4); overflow: auto;
+  }
+  dialog::backdrop { background: rgba(26,10,14,.6); }
+  .dlg-head { background: var(--maroon); color: var(--cream); padding: 18px 20px 16px; display: grid; gap: 4px; position: relative; }
+  .dlg-head .k { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; opacity: .85; }
+  .dlg-head .d { font-family: var(--font-display); font-size: 40px; line-height: .95; color: #fff; }
+  .dlg-head .t { font-size: 15px; }
+  .dlg-head .starts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .dlg-head .starts span { background: rgba(247,226,188,.14); border: 1px solid rgba(247,226,188,.3); border-radius: 999px; padding: 3px 10px; font-size: 14px; color: #fff; }
+  .dlg-head .starts b { color: var(--gold); font-weight: 700; }
+  .x { position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; border-radius: 999px; border: 0; background: rgba(247,226,188,.15); color: #fff; font-size: 22px; line-height: 1; cursor: pointer; }
+  .x:hover { background: rgba(247,226,188,.3); }
+  form.book { padding: 20px; display: grid; gap: 18px; }
+  .field { display: grid; gap: 6px; }
+  .label { font-weight: 700; font-size: 16px; }
+  .label small { font-weight: 500; color: var(--muted); font-size: 14px; }
+  .control { width: 100%; min-height: 50px; padding: 10px 14px; border: 2px solid var(--line); border-radius: 12px; background: var(--surface-2); font-size: 17px; }
+  .control[aria-invalid="true"] { border-color: var(--bad); }
+  .hint { font-size: 13px; color: var(--muted); }
+  .teams { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0; padding: 0; border: 0; }
+  .teams legend { padding: 0; margin-bottom: 6px; }
+  .chip { position: relative; }
+  .chip input { position: absolute; inset: 0; z-index: 1; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+  .chip span { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 72px; border: 2px solid var(--line); border-radius: 12px; background: var(--surface-2); font-family: var(--font-display); font-size: 36px; line-height: 1; }
+  .chip span small { font-family: var(--font-body); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+  .chip input:checked + span { background: var(--gold); border-color: var(--gold); color: var(--maroon-ink); }
+  .chip input:checked + span small { color: var(--maroon-ink); }
+  .chip input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .teams.txt .chip span { font-family: var(--font-body); font-size: 18px; font-weight: 700; min-height: 56px; letter-spacing: 0; }
+  .teams[aria-invalid="true"] .chip span { border-color: var(--bad); }
+  .trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .err { background: var(--bad-bg); color: var(--bad); border-radius: 10px; padding: 10px 12px; font-size: 15px; font-weight: 600; }
+  .submit {
+    display: grid; justify-items: center; gap: 2px; width: 100%; cursor: pointer;
+    background: var(--maroon); color: #fff; border: 0; border-radius: 14px; padding: 14px 18px; box-shadow: 0 8px 20px rgba(124,41,56,.35);
+  }
+  .submit .big { font-family: var(--font-display); font-size: 32px; line-height: 1; letter-spacing: .03em; }
+  .submit .small { font-size: 13px; color: var(--cream); }
+  .submit:disabled { opacity: .6; cursor: progress; }
+  .done { padding: 24px 20px 22px; display: grid; gap: 12px; justify-items: start; }
+  .done .check { width: 56px; height: 56px; border-radius: 999px; background: var(--ok-bg); color: var(--ok); display: grid; place-items: center; font-size: 30px; font-weight: 700; }
+  .done h3 { font-size: 36px; }
+  .done p { color: var(--muted); }
+  .done p strong { color: var(--fg); }
+  .ghost { background: none; border: 2px solid var(--line); border-radius: 12px; padding: 10px 16px; cursor: pointer; font-weight: 700; }
+  .ghost:hover { border-color: var(--muted); }
+
+  footer { margin-top: 44px; background: var(--maroon-ink); color: var(--cream); }
+  footer .wrap { padding-block: 26px 30px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; font-size: 14px; }
+  footer img { width: 40px; height: auto; }
+  footer a { color: var(--gold); }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="club">
+      <img src="bilder/kbk.png" alt="Kungsladugårds BK:s klubbmärke" width="200" height="216">
+      <div>
+        <div class="name">Kungsladugårds BK</div>
+        <div class="sub">Motion dam · Old Girls · Göteborg</div>
+      </div>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1>Boka en träningsmatch <em>mot oss</em></h1>
+        <p class="lead">Vi är Old Girls, KBK:s motionslag för damer, och vi vill spela fler matcher. Välj en ledig söndagskväll, skriv klubb och mobilnummer, så hör vi av oss och bekräftar.</p>
+        <ul class="facts" aria-label="Kort om matcherna">
+          <li>Hemma på Sjöbaren Arena</li>
+          <li>Söndagar 18:30–20:00</li>
+          <li>7 vs 7</li>
+          <li>Motionslag, damer</li>
+        </ul>
+        <a class="hero-cta" href="#tider">Se lediga tider ↓</a>
+      </div>
+      <figure class="hero-photo">
+        <img src="bilder/laget.jpg" alt="Old Girls samlade på planen en kväll under strålkastarna" width="1200" height="993" onerror="this.closest('figure').hidden = true">
+      </figure>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="tider">
+    <div class="section-head">
+      <span class="eyebrow">Lediga tider</span>
+      <h2>Välj en tid</h2>
+      <p>Alla matcher spelas <strong>7 vs 7</strong> på söndagskvällar, <strong>kl 18:30–20:00</strong>. Tryck på en ledig ruta för att boka. Tiderna kommer direkt från lagets kalender, så det du ser här är aktuellt.</p>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><i class="dot free"></i>Ledig</span>
+      <span><i class="dot taken"></i>Bokad</span>
+    </div>
+    <div id="list" aria-live="polite">
+      <div class="slots" aria-label="Laddar tider">
+        <div class="slot skeleton"></div><div class="slot skeleton"></div><div class="slot skeleton"></div><div class="slot skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="hitta-hit">
+    <div class="section-head">
+      <span class="eyebrow">Hitta hit</span>
+      <h2>Sjöbaren Arena</h2>
+      <p>Vi spelar på Sjöbaren Arena, planen precis bredvid Apelsinplan i Västra Frölunda.</p>
+    </div>
+    <div class="find">
+      <div class="find-info">
+        <h3>Adress</h3>
+        <p class="addr">Apelsingatan 4<br>426 54 Västra Frölunda</p>
+        <p>Ta er till Apelsinplan. Sjöbaren Arena ligger precis bredvid. Exakt samlingsplats stämmer vi av när vi bekräftar matchen.</p>
+        <p><strong>Parkering:</strong> stadens parkering vid Apelsinplan. Betala med appen Parkering Göteborg och läs skyltarna, reglerna är nya.</p>
+        <div class="btn-row">
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=57.65460%2C11.88290" target="_blank" rel="noopener">Vägbeskrivning ↗</a>
+          <a class="btn alt" href="https://maps.apple.com/?daddr=57.65460,11.88290&amp;q=Apelsinplan" target="_blank" rel="noopener">Apple Kartor ↗</a>
+        </div>
+      </div>
+      <figure class="map">
+        <iframe title="Karta över Apelsinplan och Sjöbaren Arena i Västra Frölunda" loading="lazy"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=11.8762%2C57.6519%2C11.8896%2C57.6573&amp;layer=mapnik&amp;marker=57.65460%2C11.88290"></iframe>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="sa-gar-det-till">
+    <div class="section-head">
+      <span class="eyebrow">Så går det till</span>
+      <h2>Tre steg</h2>
+    </div>
+    <ol class="how">
+      <li><h3>Välj en tid</h3><p>Alla rutor är söndagskvällar då vi har planen bokad för match.</p></li>
+      <li><h3>Klubb och nummer</h3><p>Skriv vilken klubb ni är och vilket mobilnummer vi når er på. Matcherna spelas 7 vs 7.</p></li>
+      <li><h3>Vi bekräftar</h3><p>Vi hör av oss på numret ni skrev och stämmer av samlingstid.</p></li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="bilder/kbk.png" alt="" width="200" height="216">
+    <span>Kungsladugårds BK Motion dam · Göteborg</span>
+    <a href="https://www.kungsladugardsbk.se/kungsladugardsbk-motiondam" target="_blank" rel="noopener">Lagets sida på kungsladugardsbk.se</a>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlgDay">
+  <div class="dlg-head">
+    <span class="k">Träningsmatch mot KBK Motion dam</span>
+    <span class="d" id="dlgDay">Söndag 31 januari</span>
+    <span class="t" id="dlgTime">18:30–20:00 · Sjöbaren · 7 vs 7</span>
+    <button class="x" type="button" id="dlgClose" aria-label="Stäng">×</button>
+  </div>
+
+  <form class="book" id="form" novalidate>
+    <div class="field">
+      <label class="label" for="klubb">Klubb</label>
+      <input class="control" id="klubb" name="klubb" type="text" maxlength="80" autocomplete="organization" placeholder="Klubb och lag, till exempel Exempelvikens IF Dam" required>
+    </div>
+
+    <div class="field">
+      <label class="label" for="mobil">Mobilnummer</label>
+      <input class="control" id="mobil" name="mobil" type="tel" inputmode="tel" maxlength="20" autocomplete="tel" placeholder="070-123 45 67" required>
+      <span class="hint">Vi ringer eller sms:ar hit för att bekräfta matchen.</span>
+    </div>
+
+    <div class="field">
+      <label class="label" for="namn">Ditt namn <small>(valfritt)</small></label>
+      <input class="control" id="namn" name="namn" type="text" maxlength="60" autocomplete="name">
+    </div>
+
+    <div class="trap" aria-hidden="true">
+      <label for="hp">Lämna tomt</label><input id="hp" name="hp" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    <p class="err" id="err" role="alert" hidden></p>
+
+    <button class="submit" type="submit" id="submit">
+      <span class="big">Boka tiden</span>
+      <span class="small">Vi får ett mejl och hör av oss till er</span>
+    </button>
+  </form>
+
+  <div class="done" id="done" hidden>
+    <div class="check" aria-hidden="true">✓</div>
+    <h3>Tiden är bokad</h3>
+    <p id="doneText"></p>
+    <button class="ghost" type="button" id="doneClose">Stäng</button>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  const API = new URLSearchParams(location.search).get("api") || "https://kbk-motiondam.8bitcat.io";
+  const MAN = ["januari","februari","mars","april","maj","juni","juli","augusti","september","oktober","november","december"];
+  const MAN_KORT = ["jan","feb","mar","apr","maj","jun","jul","aug","sep","okt","nov","dec"];
+  const DAG = ["Söndag","Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag"];
+  const DAG_KORT = ["Sön","Mån","Tis","Ons","Tor","Fre","Lör"];
+
+  const $ = (id) => document.getElementById(id);
+  const list = $("list"), dlg = $("dlg"), form = $("form"), err = $("err"), submit = $("submit");
+  let tider = [], vald = null;
+  const mina = new Set(); // tider som bokats från den här webbläsaren under besöket
+
+  const delar = (d) => { const [y, m, dd] = d.split("-").map(Number); return { y, m, d: dd, wd: new Date(y, m - 1, dd).getDay() }; };
+  const tidText = (t) => t.slut ? `${t.start}–${t.slut}` : t.start;
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  function rita() {
+    if (!tider.length) {
+      list.innerHTML = '<div class="state"><p>Just nu finns inga matchtider inlagda. Titta in igen lite senare.</p></div>';
+      return;
+    }
+    const grupper = new Map();
+    for (const t of tider) {
+      const k = t.datum.slice(0, 7);
+      if (!grupper.has(k)) grupper.set(k, []);
+      grupper.get(k).push(t);
+    }
+    let html = "";
+    for (const [k, rad] of grupper) {
+      const [y, m] = k.split("-").map(Number);
+      const lediga = rad.filter((t) => !t.bokad).length;
+      html += `<div class="month"><h3>${MAN[m - 1][0].toUpperCase() + MAN[m - 1].slice(1)} ${y} <small>${lediga} av ${rad.length} lediga</small></h3><div class="slots">`;
+      for (const t of rad) {
+        const p = delar(t.datum);
+        const min = mina.has(t.id);
+        const av = t.bokad && t.bokadAv ? t.bokadAv : "";
+        const status = t.bokad ? (av ? "Bokad av " + av : "Bokad") : "Ledig";
+        const etikett = `${DAG[p.wd]} ${p.d} ${MAN[p.m - 1]}, kl ${tidText(t)}, ${t.bokad ? status.toLowerCase() : "ledig, tryck för att boka"}`;
+        html += `<button type="button" class="slot${min ? " mine" : ""}" data-id="${esc(t.id)}" aria-label="${esc(etikett)}"${t.bokad ? ' aria-disabled="true"' : ""}>` +
+          `<span class="wd">${DAG_KORT[p.wd]}</span>` +
+          `<span class="day">${p.d}<small>${MAN_KORT[p.m - 1]}</small></span>` +
+          `<span class="matches"><span class="m"><small>Avspark</small><b>${esc(t.start)}</b></span>${t.slut ? `<span class="m"><small>Slut</small><b>${esc(t.slut)}</b></span>` : ""}</span>` +
+          `<span class="pill"${av ? ` title="${esc(status)}"` : ""}>${esc(status)}</span></button>`;
+      }
+      html += "</div></div>";
+    }
+    list.innerHTML = html;
+  }
+
+  async function ladda() {
+    try {
+      const r = await fetch(API + "/tider", { cache: "no-store" });
+      if (!r.ok) throw new Error(r.status);
+      const d = await r.json();
+      tider = d.tider || [];
+      rita();
+    } catch (e) {
+      list.innerHTML = '<div class="state"><p>Tiderna gick inte att hämta just nu.</p><button class="ghost" type="button" id="retry">Försök igen</button></div>';
+      $("retry").onclick = ladda;
+    }
+  }
+
+  function oppna(t) {
+    vald = t;
+    const p = delar(t.datum);
+    $("dlgDay").textContent = `${DAG[p.wd]} ${p.d} ${MAN[p.m - 1]}`;
+    $("dlgTime").textContent = `${tidText(t)}${t.plats ? " · " + t.plats : ""} · 7 vs 7`;
+    form.hidden = false; $("done").hidden = true; err.hidden = true;
+    for (const el of form.querySelectorAll(".control")) el.removeAttribute("aria-invalid");
+    submit.disabled = false;
+    dlg.showModal();
+    setTimeout(() => $("klubb").focus(), 30);
+  }
+
+  list.addEventListener("click", (e) => {
+    const b = e.target.closest(".slot[data-id]");
+    if (!b || b.getAttribute("aria-disabled") === "true") return;
+    const t = tider.find((x) => x.id === b.dataset.id);
+    if (t) oppna(t);
+  });
+
+  const stang = () => dlg.close();
+  $("dlgClose").onclick = stang;
+  $("doneClose").onclick = stang;
+  dlg.addEventListener("click", (e) => { if (e.target === dlg) stang(); });
+
+  function visaFel(text, falt) {
+    err.textContent = text; err.hidden = false;
+    if (falt) { falt.setAttribute("aria-invalid", "true"); falt.focus(); }
+  }
+
+  form.addEventListener("input", (e) => {
+    if (e.target.classList.contains("control")) e.target.removeAttribute("aria-invalid");
+    err.hidden = true;
+  });
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    err.hidden = true;
+    for (const el of form.querySelectorAll(".control")) el.removeAttribute("aria-invalid");
+    const klubb = $("klubb").value.trim();
+    const mobil = $("mobil").value.trim();
+    const mobilRen = mobil.replace(/[\s\-()]/g, "").replace(/^0046/, "+46");
+    if (klubb.length < 2) return visaFel("Skriv vad klubben heter.", $("klubb"));
+    if (!/^(\+46|0)\d{7,10}$/.test(mobilRen)) return visaFel("Skriv ett svenskt mobilnummer, till exempel 070-123 45 67.", $("mobil"));
+
+    submit.disabled = true;
+    submit.querySelector(".big").textContent = "Bokar …";
+    try {
+      const r = await fetch(API + "/boka", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: vald.id, klubb, mobil, namn: $("namn").value.trim(), hp: $("hp").value }),
+      });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok || !d.ok) {
+        visaFel(d.fel || "Bokningen gick inte igenom. Försök igen om en stund.");
+        if (d.uppdatera) ladda();
+        return;
+      }
+      mina.add(vald.id);
+      const t = tider.find((x) => x.id === vald.id);
+      if (t) { t.bokad = true; t.bokadAv = klubb; }
+      rita();
+      const p = delar(vald.datum);
+      $("doneText").innerHTML = `<strong>${esc(klubb)}</strong>, ${DAG[p.wd].toLowerCase()} ${p.d} ${MAN[p.m - 1]} kl ${esc(tidText(vald))}. ` +
+        `Vi hör av oss på <strong>${esc(mobil)}</strong> och bekräftar matchen.`;
+      form.hidden = true; $("done").hidden = false;
+      $("doneClose").focus();
+      form.reset();
+    } catch (e2) {
+      visaFel("Det gick inte att nå bokningen. Kontrollera nätet och försök igen.");
+    } finally {
+      submit.disabled = false;
+      submit.querySelector(".big").textContent = "Boka tiden";
+    }
+  });
+
+  ladda();
+})();
+</script>
+</body>
+</html>
